@@ -1,0 +1,185 @@
+/*
+* @Author: yangsa
+* @Date:   2017-11-20 14:48:19
+* @Last Modified by:   yangsa
+* @Last Modified time: 2017-11-20 19:47:08
+*/
+
+.jd_sort{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.jd_sort .header{
+	width: 100%;
+	height: 44px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #ccc;
+	background: url('../images/header-bg.png');
+	z-index: 10;
+}
+.header .search{
+	width: 100%;
+	display: flex;
+	
+}
+.header .search input {
+	width: 100%;
+	height: 30px;
+	flex: 1;
+	margin-right: 44px;
+	margin-left: 44px;
+	margin-top: 6px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+.header .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 40px;
+  height: 45px;
+  padding:  10px 11px;
+  box-sizing: border-box;
+  background-image: url("../images/jd-sprites.png");
+  background-size: 200px 200px;
+  background-position: -10px 12px;
+  background-clip: content-box;
+}
+
+.header .menu{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 45px;
+	padding: 10px 11px;
+	box-sizing: border-box;
+	background: url('../images/jd-sprites.png');
+	background-position: -47px 11px;
+	background-size: 200px 200px;
+	background-clip: content-box;
+
+}
+
+
+/* 主体内容 */
+.main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding-top: 45px;
+	box-sizing: border-box;
+}
+.main .list{
+	width: 90px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin-top: 45px;
+}
+.main .list ul{
+	width: 100%;
+	/* height: 100%; */
+	overflow: hidden;
+}
+.main .list ul li{
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	line-height: 33px;
+	border-right:1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0; 
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color:#f3f4f6;
+}
+.main .list ul .active{
+	border-right: none;
+	border-bottom: none;
+	color: #f15353;
+	background-color: #fff;
+}
+/* 热门推荐 */
+.main .content{
+	flex: 1;
+	margin-left: 90px;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+	
+}
+.main .content h4,.hot_sale h4{
+	font-size: 12px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+	color: #888;
+}
+.main .content .hot_content{
+	width: 100%;
+}
+.main .content .hot_content ul{
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.content .hot_content ul li{
+	width: 33.3333%;
+	height: 49px;
+	line-height: 49px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	float: left;
+}
+/* 热门导购 */
+.content .hot_sale{
+	width: 100%;
+}
+.content .hot_sale ul{
+	width: 100%;
+	overflow: hidden;
+}
+.content .hot_sale ul li{
+	width: 33.3333%;
+	float: left;
+	text-align: center;
+}
+.hot_sale ul li img{
+	width: 100%;
+	margin-bottom: 5px;
+}
+.hot_sale ul li strong{
+	font-weight: 400;
+}
+
+/* 热卖品类 */
+.content .hot_list{
+	width: 100%;
+}
+.content .hot_list ul{
+	width: 100%;
+}
+.content .hot_list ul li{
+	width: 33.3333%;
+	float: left;
+	text-align: center
+}
+.hot_list ul li img{
+	width: 100%;
+	margin: 5px 0px;
+}
+.hot_list ul li strong{
+	font-weight: 400;	
+}
