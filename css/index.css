@@ -1,0 +1,678 @@
+/*
+* @Author: Sunny
+* @Date:   2017-11-19 11:43:09
+* @Last Modified by:   Sunny
+* @Last Modified time: 2017-11-20 12:12:13
+*/
+html,body{
+  background-color: #f7f7f7;
+}
+
+/* 在移动端会有一些元素出现手指触摸之后出现背景颜色 去除掉 */
+/* 在ios系统中 所有input都会自带一个内阴影  你通过很多方法都去除不掉 */
+/* -webkit-appearance: none; 可以去除掉内阴影 */
+/*   */
+
+* {
+  -webkit-tap-highlight-color: transparent; 
+}
+/* 头部 */
+.jdm {
+  width: 100%;
+  margin: 0 auto;
+}
+.header{
+  width: 100%;
+  height: 40px;
+  background-color: #c91523;
+  padding-left: 75px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  position: relative;
+
+}
+/* logo部分 */
+.header .header_logo{
+  display: block;
+  width: 56px;
+  height: 21px;
+  position: absolute;
+  /* 运算两边必须有空格 */
+  left: calc((75px - 56px) / 2);
+  top: calc((40px - 21px) / 2);
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-position: 0 -109px;
+  /* 将二倍图转为一倍图 */
+  background-size: 200px 200px;
+}
+/* 搜索框 */
+.header input{
+ width: 100%;
+ height: 30px;
+ margin-top: 5px;
+ border-radius: 15px;
+ font-size: 14px;
+ padding-left: 30px;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+}
+.header i{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/jd-sprites.png');
+  background-position: -60px -109px;
+  background-size: 200px 200px;
+  position: absolute;
+  left: 85px ;
+  top: 10px;
+}
+.header .header_login{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* 主体部分 */
+/* 轮播图 */
+.jdm_content{
+  width: 100%;
+}
+.jdm_content .carousel{
+  width: 100%;
+}
+.carousel a{
+  width: 100%;
+}
+.carousel a img{
+  width: 100%;
+  vertical-align: middle;
+}
+/* 导航 */
+.jdm_content .nav{
+  width: 100%;
+  background-color: #fff;
+}
+.nav ul{
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav ul li{
+  width: 25%;
+  text-align: center;
+}
+.nav ul a{
+  display: block;
+  width: 100%;
+}
+.nav ul li img{
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 5px 25px 7px;
+  /* margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 7px;  */ 
+}
+.nav ul li p{
+  margin-bottom: 10px;
+}
+
+/* 掌上秒杀 */
+.jdm_content .seckill{
+  margin-top: 5px;
+  width: 100%;
+  background-color: #fff;
+}
+.seckill .seckill_title{
+  width: 100%;
+  height: 35px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+.seckill_title .title_left{
+  float: left;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.title_left h2{
+  float: left;
+  font-size: 15px;
+  color: #CA1327;
+  padding-left: 20px;
+  position: relative;
+   margin-right: 5px;
+}
+.title_left h2:before{
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -6px;
+  width: 20px;
+  height: 26px;
+  background: url("../images/jd-sprites.png");
+  background-position: -84px -107px;
+  background-size: 200px 200px;
+}
+.title_left ul{
+  float: left;
+  height: 100%;
+  overflow: hidden;
+}
+.title_left ul li{
+  float: left;
+  height: 100%;
+  line-height: 100%;
+  font-size: 14px;
+  background-color: #3d3d3d;
+  color: #fff;
+
+}
+.title_left ul li:nth-child(3n){
+  background-color: #fff;
+  color: #000;
+  margin: 0 3px;
+}
+.title_left ul li:nth-child(3n+1){
+  padding: 2px 0px 2px 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.title_left ul li:nth-child(3n+2){
+  padding: 2px 2px 2px 0px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.seckill_title .title_right{
+  height: 100%;
+  float: right;
+}
+.title_right a{
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  margin-right:15px; 
+  position: relative;
+}
+.title_right a:after{
+  content: ""; 
+  position: absolute;
+  right: -10px;
+  top: 0;
+  height: 12px;
+  width: 7px;
+  background: url('../images/jd-sprites.png');
+  background-size: 200px 200px;
+  background-position: -186px -51px;
+}
+
+.seckill .seckill_content{
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.seckill_content ul{
+  width: 100%;
+  font-size: 0;
+}
+.seckill_content ul li{
+  display: inline-block;
+  width: 33.3333%;
+  position: relative;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.seckill_content li img{
+  width: 100%;
+}
+.seckill_content li a{
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.seckill_content li a span{
+  display: block;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-size: 13px;
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fdb60a;
+
+}
+
+.seckill_content li strong{
+  display: block;
+  font-size: 14px;
+  color: #ed5657;
+  font-weight: 400;
+  margin: 5px 0px;
+}
+.seckill_content li del{
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.meeting{
+  width: 100%;
+  height:185px ;
+  background: url('../upload/banner_bg.jpg');
+  background-size: cover;
+  position: relative;
+}
+.meeting ul {
+  width: 100%;
+  overflow: hidden;
+ padding: 0 8px;
+ box-sizing: border-box;
+ position: absolute;
+ bottom: 5px;
+  
+ 
+}
+.meeting li{
+  width: 50%;
+ float: left;
+}
+.meeting li a{
+  width: 100%;
+}
+.meeting li img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* 热卖 */
+.hot_sale{
+  width: 100%;
+  background-color: #fff;
+}
+.hot_sale .sale_top ul{
+  width: 100%;
+  font-size: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.hot_sale .sale_top ul li{
+  display: inline-block;
+  width: 33.33333%;
+}
+.hot_sale .sale_top li a{
+  widows:100% ;
+}
+.hot_sale .sale_top li a img{
+  width: 100%;
+}
+.hot_sale .sale_bottom{
+  width: 100%;
+}
+.sale_bottom ul{
+  width: 100%;
+  font-size: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.sale_bottom ul li{
+  display: inline-block;
+  width: 50%;
+}
+.sale_bottom ul li a{
+  width: 100%;
+}
+.sale_bottom li a img{
+  width: 100%;
+}
+/* 广告 */
+.advert{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.advert img{
+  width: 100%;
+}
+
+
+/* 特色超市 */
+.market{
+  width: 100%;
+  background-color: #fff;
+}
+.market h4,.theme h4,.brand h4{
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  margin-left: 10px;
+  color: #ed5657;
+  font-weight: 400;
+}
+.market ul{
+  width: 100%;
+  /* font-size: 0; */
+  overflow: hidden;
+}
+.market ul li {
+  /* display: inline-block; */
+  width: 50%;
+  float: left;
+}
+.market ul li img{
+  width: 100%;
+  /* vertical-align: top; */
+}
+
+/* 主题街 */
+.theme{
+  width: 100%;
+}
+.theme .theme_top{
+  width: 100%;
+  overflow: hidden;
+
+}
+.theme_top .top_left{
+  width: 50%;
+  float: left;
+}
+.theme_top .top_left img{
+  width: 100%;
+}
+.top_right_top{
+   float: left;
+  width: 50%;
+}
+.top_right_top img{
+  width: 100%;
+}
+.top_right_bottom{
+   float: left;
+  width: 50%;
+}
+.top_right_bottom img{
+  float: left;
+  width: 50%;
+}
+.theme .theme_bottom{
+  width: 100%;
+}
+.theme .theme_bottom ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.theme .theme_bottom li{
+  width: 25%;
+}
+.theme .theme_bottom li img{
+  width: 100%;
+}
+
+/* 品牌推荐 */
+.brand{
+  width: 100%;
+  background-color: #fff;
+}
+.brand ul{
+  width: 100%;
+  overflow: hidden;
+}
+.brand li{
+  width: 30%;
+  float: left;
+}
+
+.brand ul li:first-child{
+  width: 40%;
+}
+.brand li a{
+  display: block;
+  width: 100%;
+}
+.brand ul li img{
+  width: 100%;
+}
+
+/* 猜你喜欢 */
+.guess{
+  width: 100%;
+  padding: 0 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.guess .guess_like{
+  height: 34px;
+  float: left;
+}
+.guess_like h4{
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7F7F7F;
+}
+.guess .guess_login{
+  float: right;
+}
+.guess .guess_login p{
+  font-size: 13px;
+  height: 34px;
+  line-height: 34px;
+  margin-right: 15px;
+  color: #f15353;
+  position: relative;
+}
+.guess .guess_login p:before{
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/icon-login.png");
+  background-size: 18px 18px;
+  position: absolute;
+  left: -20px;
+  top: 6px;
+}
+.guess .guess_login p:after{
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon-right.png");
+  background-repeat: no-repeat;
+  background-size: 4px 7px;
+  position: absolute;
+  left: 81px;
+  top: 13px;
+}
+.guess_product{
+  width: 100%;
+  background-color: #fff;
+}
+.guess_product ul{
+  width: 100%;
+  overflow: hidden;
+}
+.guess_product ul li{
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+}
+.guess_product li a{
+  width: 100%;
+}
+.guess_product li a img{
+  width: 100%;
+}
+.guess_product a p{
+  font-size: 13px;
+  line-height:20px ;
+  margin-bottom: 10px;
+  color: #333;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+
+}
+.guess_product .product_text{
+  width: 100%;
+  padding: 10px 0px;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc ;
+  margin: 10px 0px;
+
+}
+.guess_product .product_text span:first-child{
+  font-size: 14px;
+  color: #f15353;
+  float: left;
+
+}
+.guess_product .product_text span:last-child{
+    float: right;
+    border: 1px solid #ccc;
+    padding: 3px 3px 1px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #999;
+}
+
+/* 点击加载更多 */
+.download{
+  width: 100%;
+}
+.download .downmore{
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-bottom: 1px solid #DEDEDE;
+  border-top: 1px solid #DEDEDE;
+  background-color: #f3f5f7;
+}
+.download .downmore a{
+  display: block;
+  width: 100%;
+  color: #7F7F7F;
+}
+
+.download .back{
+  width: 100%;
+  border-bottom: 1px solid #DEDEDE;
+  background-color: #f3f5f7;
+}
+.back ul{
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  
+}
+ .back ul li{
+  float: left;
+  padding:0px 22px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  font-size: 14px;
+}
+.back ul li a{
+   color: #7F7F7F;
+}
+.back ul li:last-child{
+  border-right: none;
+} 
+
+.app {
+  width: 100%;
+  border-bottom: 1px solid #DEDEDE;
+   background-color: #f3f5f7;
+}
+.app ul{
+  width: 100%;
+  padding: 10px 0px;
+  overflow: hidden;
+
+}
+.app ul li{
+  width: 33.3333%;
+  height: 56px;
+  text-align: center;
+  position: relative;
+  float: left;
+  position: relative;
+
+}
+.app ul li a{
+  display: block;
+  width:40px;
+  height: 45px;
+  margin: 0 auto;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  background: url('../images/jd-sprites.png');
+  background-position: -119px -69px;
+  background-size: 200px 200px; 
+  
+}
+.app ul li strong{
+  position: absolute;
+  left: 38px;
+  bottom: 2px;
+  color:#848689;
+  font-weight: 400;
+}
+
+.copyright{
+  width: 100%;
+  text-align: center;
+   background-color: #f3f5f7;
+}
+.copyright P{
+  height: 45px;
+  line-height: 45px;
+  color:#848689;
+}
+
+/* 底部 */
+.footer{
+  width: 100%;
+  background-color: #fff;
+}
+.footer ul{
+  width: 100%;
+  display: flex;
+}
+.footer ul li{
+  flex: 1;
+  width: 20%;
+  text-align: center;
+}
+.footer ul a{
+ width: 100%
+}
+.footer ul a img{
+  height: 44px;
+  width: auto;
+}
